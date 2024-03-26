@@ -1,0 +1,6 @@
+.app-accordion {
+    display: flex;
+    justify-content: center;
+    width: 25rem;
+    margin: 0 auto;
+}

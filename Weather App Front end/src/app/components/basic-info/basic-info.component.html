@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center">
+    <form [formGroup]="basicInfoForm" (ngSubmit)="onClickSave()">
+        <app-input-component>
+            <label class="col-sm-4 col-form-label input-label">Username</label>
+            <div class="col-sm-8 input-area d-flex align-items-center">
+                <i class="fa-solid fa-user mr-2 mx-2"></i>
+                <input type="text" placeholder="username" formControlName="username" inputRef class="form-control-plaintext input-field" readonly>
+            </div>
+        </app-input-component>
+        <app-input-component>
+            <label class="col-sm-4 col-form-label input-label">Fullname</label>
+            <div class="col-sm-8 input-area d-flex align-items-center">
+                <input type="text" placeholder="fullname" formControlName="fullname" class="input-field form-control-plaintext" inputRef>
+            </div>
+        </app-input-component>
+        <span style="color:red;" *ngIf="basicInfoForm.get('fullname')?.invalid && basicInfoForm.get('fullname')?.touched"><small>Fullname is required & minimum length is 4</small></span>
+        <div class="my-3">
+            <button [disabled]="basicInfoForm.invalid" [ngClass]="basicInfoForm.invalid ? 'btn btn-secondary btn-disabled' : 'btn btn-primary'">Save</button>
+        </div>
+    </form>
+</div>

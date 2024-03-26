@@ -1,0 +1,7 @@
+<div class="form-group mb-3">
+    <label class="mb-2"><h5>Location</h5></label>
+    <select class="form-control" [(ngModel)]="locationId" (change)="onLocationChangeClick()" >
+        <option value="0" *ngIf="!locationId">Please choose an option</option>
+        <option *ngFor="let location of locations" [value]="location.id" [selected]="location.id === locationId">{{ location.name }}</option>
+    </select>
+</div>

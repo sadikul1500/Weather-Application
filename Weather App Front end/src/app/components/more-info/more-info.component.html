@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center">
+    <form [formGroup]="moreInfoForm" (ngSubmit)="onClickSave()">
+        <app-input-component>
+            <label class="col-sm-3 col-form-label input-label">Address</label>
+            <div class="col-sm-9 input-area d-flex align-items-center">
+                <i class="fa-solid fa-house mr-2 mx-2"></i>
+                <input type="text" placeholder="Address" formControlName="address" inputRef class="form-control-plaintext input-field">
+            </div>
+        </app-input-component>
+        <span style="color:red;" *ngIf="moreInfoForm.get('address')?.invalid && moreInfoForm.get('phone')?.touched"><small>No special charcater is allowed</small></span>
+        <app-input-component>
+            <label class="col-sm-3 col-form-label input-label">Email</label>
+            <div class="col-sm-9 input-area d-flex align-items-center">
+                <i class="fa-solid fa-envelope mr-2 mx-2"></i>
+                <input type="email" placeholder="Email" formControlName="email" inputRef class="form-control-plaintext input-field">
+            </div>
+        </app-input-component>
+        <span style="color:red;" *ngIf="moreInfoForm.get('email')?.invalid && moreInfoForm.get('email')?.touched"><small>Email is not valid</small></span>
+        <app-input-component>
+            <label class="col-sm-3 col-form-label input-label">Phone</label>
+            <div class="col-sm-9 input-area d-flex align-items-center">
+                <i class="fa-solid fa-phone mr-2 mx-2"></i>
+                <input type="text" placeholder="Phone" formControlName="phone" class="form-control-plaintext input-field" inputRef>
+            </div>
+        </app-input-component>
+        <span style="color:red;" *ngIf="moreInfoForm.get('phone')?.invalid && moreInfoForm.get('phone')?.touched"><small>Phone number must be of 5 digits</small></span>
+        <div class="my-3">
+            <button [disabled]="moreInfoForm.invalid" [ngClass]="moreInfoForm.invalid ? 'btn btn-secondary btn-disabled' : 'btn btn-primary'">Save</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="form-group mb-3">
+      <label class="mb-2"><h5>Unit</h5></label>  
+      <select class="custom-select form-control" [(ngModel)]="unit" (change)="onTemperatureChange()">
+        <option value="">Please choose an option</option>
+        <option value="Kelvin">Kelvin</option>
+        <option value="Celsius">Celsius</option>
+        <option value="Farenheit">Farenheit</option>
+      </select>
+    </div>
+    <!-- <div class="app-filter-location" (onLocationChange)="onChangeLocation($event)"></div> -->
+    <app-filter-location (onLocationChange)="onChangeLocation($event)"></app-filter-location>
+</div>

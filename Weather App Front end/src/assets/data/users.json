@@ -1,0 +1,26 @@
+[
+    {
+    "id": 1,
+    "username": "sadi",
+    "password": "s123",
+    "token": "abc123xyz456"
+    },
+    {
+    "id": 2,
+    "username": "afrin",
+    "password": "af123",
+    "token": "def789uvw012"
+    },
+    {
+    "id": 3,
+    "username": "anika",
+    "password": "an123",
+    "token": "ghi345rst678"
+    },
+    {
+    "id": 4,
+    "username": "enosis",
+    "password": "e123",
+    "token": "jkl901mno234"
+    }
+]

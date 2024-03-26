@@ -1,0 +1,13 @@
+<div class="card text-center my-2 mx-auto">
+    <div class="card-header">
+      <h5>{{title | titlecase}}</h5>
+    </div>
+    <div class="card-body">
+      <ng-content select=".body-content"></ng-content>
+    </div>
+    <ng-container *ngIf="hasFooter">
+      <div class="card-footer text-body-secondary">
+        <ng-content select=".footer-content"></ng-content>
+      </div>
+    </ng-container>
+</div>

@@ -1,0 +1,7 @@
+/* :host ::ng-deep .app-accordion{
+    display: inline-block;
+} */
+
+.card{
+    width: 100%;
+}
